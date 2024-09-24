@@ -7,7 +7,7 @@ const server = http.createServer((req, res)=>{
     if(req.method === 'GET'){
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write('<h1>Get Method is processed</h1>');
-        //"http://localhost:3000/?username=&age=3"
+        URL:"http://localhost:3000/?username=Hemanth&age=21"
         const parsedURL = url.parse(req.url, true)
         const {username, age} = parsedURL.query
         res.write(`<h3>Username: ${username}</h3>`)
